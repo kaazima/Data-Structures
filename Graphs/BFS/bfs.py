@@ -1,5 +1,6 @@
 from collections import deque
 
+# Function to return a list containing the BFS traversal of the directed graph
 def bfs_graph(vertices, adj):
     bfs = []
     visited = set()
@@ -16,7 +17,7 @@ def bfs_graph(vertices, adj):
     return bfs
 
 print('-----------------------------------------------------------')
-print('\tWelcome to Breadth First Search for a graph')
+print('\tWelcome to Breadth First Search for a directed graph')
 print('-----------------------------------------------------------\n')
 t = int(input("Enter the number of testcases: "))
 for _ in range(t):
