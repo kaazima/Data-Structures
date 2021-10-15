@@ -1,8 +1,9 @@
 from collections import deque
 
 # Function to return a list containing the DFS traversal of the undirected graph
-def dfs_graph(vertices, adj, path):
+def dfs_graph(vertices, adj):
     visited = set()
+    path = []
     for node in range(vertices):
         if node not in visited:
             dfs(node, visited, path)
@@ -28,8 +29,7 @@ for _ in range(t):
         start, end = map(int, input("Enter edge: ").split())
         adj[start].append(end)
         adj[end].append(start) # This line should be removed for directed graph
-    path = []
-    path = dfs_graph(vertices, adj, path)
+    path = dfs_graph(vertices, adj)
     print("\nDFS Traversal:")
     for node in path:
         print(node, end =' ')
