@@ -24,6 +24,7 @@ for _ in range(t):
     print('\n*************** Testcase', _+1, '***************\n')
     vertices, edges = map(int, input("Enter number of vertices & edges: ").split())
     adj = [[] for vertex in range(vertices)]
+    # Create an adjacency list
     for edge in range(edges):
         start, end = map(int, input("Enter edge: ").split())
         adj[start].append(end)
